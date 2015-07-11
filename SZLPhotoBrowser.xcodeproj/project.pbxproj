@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		655AC5821B50D5AF0014C907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5811B50D5AF0014C907 /* main.m */; };
+		655AC5851B50D5AF0014C907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5841B50D5AF0014C907 /* AppDelegate.m */; };
+		655AC5881B50D5AF0014C907 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5871B50D5AF0014C907 /* ViewController.m */; };
+		655AC58B1B50D5AF0014C907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655AC5891B50D5AF0014C907 /* Main.storyboard */; };
+		655AC58D1B50D5AF0014C907 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655AC58C1B50D5AF0014C907 /* Images.xcassets */; };
+		655AC5901B50D5AF0014C907 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655AC58E1B50D5AF0014C907 /* LaunchScreen.xib */; };
+		655AC59C1B50D5AF0014C907 /* SZLPhotoBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC59B1B50D5AF0014C907 /* SZLPhotoBrowserTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		655AC5961B50D5AF0014C907 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 655AC5741B50D5AF0014C907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 655AC57B1B50D5AF0014C907;
+			remoteInfo = SZLPhotoBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		655AC57C1B50D5AF0014C907 /* SZLPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZLPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		655AC5801B50D5AF0014C907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655AC5811B50D5AF0014C907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		655AC5831B50D5AF0014C907 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		655AC5841B50D5AF0014C907 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		655AC5861B50D5AF0014C907 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		655AC5871B50D5AF0014C907 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		655AC58A1B50D5AF0014C907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		655AC58C1B50D5AF0014C907 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		655AC58F1B50D5AF0014C907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		655AC5951B50D5AF0014C907 /* SZLPhotoBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZLPhotoBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		655AC59A1B50D5AF0014C907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655AC59B1B50D5AF0014C907 /* SZLPhotoBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZLPhotoBrowserTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		655AC5791B50D5AF0014C907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		655AC5921B50D5AF0014C907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		655AC5731B50D5AF0014C907 = {
+			isa = PBXGroup;
+			children = (
+				655AC57E1B50D5AF0014C907 /* SZLPhotoBrowser */,
+				655AC5981B50D5AF0014C907 /* SZLPhotoBrowserTests */,
+				655AC57D1B50D5AF0014C907 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		655AC57D1B50D5AF0014C907 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				655AC57C1B50D5AF0014C907 /* SZLPhotoBrowser.app */,
+				655AC5951B50D5AF0014C907 /* SZLPhotoBrowserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		655AC57E1B50D5AF0014C907 /* SZLPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				655AC5831B50D5AF0014C907 /* AppDelegate.h */,
+				655AC5841B50D5AF0014C907 /* AppDelegate.m */,
+				655AC5861B50D5AF0014C907 /* ViewController.h */,
+				655AC5871B50D5AF0014C907 /* ViewController.m */,
+				655AC5891B50D5AF0014C907 /* Main.storyboard */,
+				655AC58C1B50D5AF0014C907 /* Images.xcassets */,
+				655AC58E1B50D5AF0014C907 /* LaunchScreen.xib */,
+				655AC57F1B50D5AF0014C907 /* Supporting Files */,
+			);
+			path = SZLPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		655AC57F1B50D5AF0014C907 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				655AC5801B50D5AF0014C907 /* Info.plist */,
+				655AC5811B50D5AF0014C907 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		655AC5981B50D5AF0014C907 /* SZLPhotoBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				655AC59B1B50D5AF0014C907 /* SZLPhotoBrowserTests.m */,
+				655AC5991B50D5AF0014C907 /* Supporting Files */,
+			);
+			path = SZLPhotoBrowserTests;
+			sourceTree = "<group>";
+		};
+		655AC5991B50D5AF0014C907 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				655AC59A1B50D5AF0014C907 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		655AC57B1B50D5AF0014C907 /* SZLPhotoBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 655AC59F1B50D5AF0014C907 /* Build configuration list for PBXNativeTarget "SZLPhotoBrowser" */;
+			buildPhases = (
+				655AC5781B50D5AF0014C907 /* Sources */,
+				655AC5791B50D5AF0014C907 /* Frameworks */,
+				655AC57A1B50D5AF0014C907 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SZLPhotoBrowser;
+			productName = SZLPhotoBrowser;
+			productReference = 655AC57C1B50D5AF0014C907 /* SZLPhotoBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		655AC5941B50D5AF0014C907 /* SZLPhotoBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 655AC5A21B50D5AF0014C907 /* Build configuration list for PBXNativeTarget "SZLPhotoBrowserTests" */;
+			buildPhases = (
+				655AC5911B50D5AF0014C907 /* Sources */,
+				655AC5921B50D5AF0014C907 /* Frameworks */,
+				655AC5931B50D5AF0014C907 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				655AC5971B50D5AF0014C907 /* PBXTargetDependency */,
+			);
+			name = SZLPhotoBrowserTests;
+			productName = SZLPhotoBrowserTests;
+			productReference = 655AC5951B50D5AF0014C907 /* SZLPhotoBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		655AC5741B50D5AF0014C907 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = zhil.shi;
+				TargetAttributes = {
+					655AC57B1B50D5AF0014C907 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					655AC5941B50D5AF0014C907 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 655AC57B1B50D5AF0014C907;
+					};
+				};
+			};
+			buildConfigurationList = 655AC5771B50D5AF0014C907 /* Build configuration list for PBXProject "SZLPhotoBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 655AC5731B50D5AF0014C907;
+			productRefGroup = 655AC57D1B50D5AF0014C907 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				655AC57B1B50D5AF0014C907 /* SZLPhotoBrowser */,
+				655AC5941B50D5AF0014C907 /* SZLPhotoBrowserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		655AC57A1B50D5AF0014C907 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655AC58B1B50D5AF0014C907 /* Main.storyboard in Resources */,
+				655AC5901B50D5AF0014C907 /* LaunchScreen.xib in Resources */,
+				655AC58D1B50D5AF0014C907 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		655AC5931B50D5AF0014C907 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		655AC5781B50D5AF0014C907 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655AC5881B50D5AF0014C907 /* ViewController.m in Sources */,
+				655AC5851B50D5AF0014C907 /* AppDelegate.m in Sources */,
+				655AC5821B50D5AF0014C907 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		655AC5911B50D5AF0014C907 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655AC59C1B50D5AF0014C907 /* SZLPhotoBrowserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		655AC5971B50D5AF0014C907 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 655AC57B1B50D5AF0014C907 /* SZLPhotoBrowser */;
+			targetProxy = 655AC5961B50D5AF0014C907 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		655AC5891B50D5AF0014C907 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				655AC58A1B50D5AF0014C907 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		655AC58E1B50D5AF0014C907 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				655AC58F1B50D5AF0014C907 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		655AC59D1B50D5AF0014C907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		655AC59E1B50D5AF0014C907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		655AC5A01B50D5AF0014C907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SZLPhotoBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		655AC5A11B50D5AF0014C907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SZLPhotoBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		655AC5A31B50D5AF0014C907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SZLPhotoBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZLPhotoBrowser.app/SZLPhotoBrowser";
+			};
+			name = Debug;
+		};
+		655AC5A41B50D5AF0014C907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SZLPhotoBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZLPhotoBrowser.app/SZLPhotoBrowser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		655AC5771B50D5AF0014C907 /* Build configuration list for PBXProject "SZLPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				655AC59D1B50D5AF0014C907 /* Debug */,
+				655AC59E1B50D5AF0014C907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		655AC59F1B50D5AF0014C907 /* Build configuration list for PBXNativeTarget "SZLPhotoBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				655AC5A01B50D5AF0014C907 /* Debug */,
+				655AC5A11B50D5AF0014C907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		655AC5A21B50D5AF0014C907 /* Build configuration list for PBXNativeTarget "SZLPhotoBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				655AC5A31B50D5AF0014C907 /* Debug */,
+				655AC5A41B50D5AF0014C907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 655AC5741B50D5AF0014C907 /* Project object */;
+}
