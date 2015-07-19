@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  SZLAnimator.m
 //  SZLPhotoBrowser
 //
 //  Created by mr.shi on 15/7/11.
 //  Copyright (c) 2015年 zhil.shi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SZLAnimator.h"
 
-@interface ViewController : UIViewController
-
+@implementation SZLAnimator
 
 @end
-
