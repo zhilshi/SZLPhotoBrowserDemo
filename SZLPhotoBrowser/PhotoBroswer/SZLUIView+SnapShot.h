@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SZLUIView_RectConvert : UIView
+@interface UIView (SnapShot)
+/**
+ *  获取当前视图的截图
+ *
+ *  @return 图像
+ */
+- (UIImage *)viewImageFromSnapShot;
+
 
 @end

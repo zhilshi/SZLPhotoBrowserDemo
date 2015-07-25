@@ -10,4 +10,6 @@
 
 @interface SZLDetailViewController : UIViewController
 
+@property (nonatomic,strong)UIImageView *imageView;
+
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SZLContainerViewController.h"
+#import "SZLContainerCollectionViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    UICollectionViewFlowLayout*layout = [[UICollectionViewFlowLayout alloc]init];
+    layout.minimumLineSpacing = 0.5;
+    layout.minimumInteritemSpacing = 0;
+    
+    
+    SZLContainerCollectionViewController *rootVC = [[SZLContainerCollectionViewController alloc]initWithCollectionViewLayout:layout];
+    UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:rootVC];
+    self.window.rootViewController = rootNav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

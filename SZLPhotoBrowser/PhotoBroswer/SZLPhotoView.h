@@ -6,8 +6,18 @@
 //  Copyright (c) 2015年 zhil.shi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class SZLPhotoModel;
 
-@interface SZLPhotoView : NSObject
+@interface SZLPhotoView : UIView
+
+@property (nonatomic,strong,readonly) SZLPhotoModel *photoModel;
+
+/**
+ *  设置更新model
+ *
+ *  @param photoModel 对象
+ */
+- (void)updatePhotoModel:(SZLPhotoModel*)photoModel;
 
 @end

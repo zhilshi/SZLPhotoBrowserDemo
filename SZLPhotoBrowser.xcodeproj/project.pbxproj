@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07133A149F3460114C4BFA21 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1280BB17767EE1BB017A7 /* libPods.a */; };
 		655AC5821B50D5AF0014C907 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5811B50D5AF0014C907 /* main.m */; };
 		655AC5851B50D5AF0014C907 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5841B50D5AF0014C907 /* AppDelegate.m */; };
-		655AC5881B50D5AF0014C907 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5871B50D5AF0014C907 /* ViewController.m */; };
 		655AC58B1B50D5AF0014C907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655AC5891B50D5AF0014C907 /* Main.storyboard */; };
 		655AC58D1B50D5AF0014C907 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655AC58C1B50D5AF0014C907 /* Images.xcassets */; };
 		655AC5901B50D5AF0014C907 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655AC58E1B50D5AF0014C907 /* LaunchScreen.xib */; };
 		655AC59C1B50D5AF0014C907 /* SZLPhotoBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC59B1B50D5AF0014C907 /* SZLPhotoBrowserTests.m */; };
+		655AC5A71B50D6480014C907 /* SZLContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5A61B50D6480014C907 /* SZLContainerViewController.m */; };
+		655AC5AB1B50D7C10014C907 /* SZLAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5AA1B50D7C10014C907 /* SZLAnimator.m */; };
+		655AC5AD1B50D7F50014C907 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655AC5AC1B50D7F50014C907 /* UIKit.framework */; };
+		655AC5B01B50DDD90014C907 /* SZLTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5AF1B50DDD90014C907 /* SZLTransitionContext.m */; };
+		655AC5B31B50EBDC0014C907 /* SZLUIView+SnapShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AC5B21B50EBDC0014C907 /* SZLUIView+SnapShot.m */; };
+		656C73661B50F52700797549 /* SZLArraySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C73651B50F52700797549 /* SZLArraySource.m */; };
+		656C73681B50FAA000797549 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C73671B50FAA000797549 /* ImageIO.framework */; };
+		656C736B1B511D3600797549 /* SZLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C736A1B511D3600797549 /* SZLDetailViewController.m */; };
+		656C73721B5216C700797549 /* SZLContainerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C73701B5216C700797549 /* SZLContainerCollectionViewController.m */; };
+		656C73731B5216C700797549 /* SZLContainerCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C73711B5216C700797549 /* SZLContainerCollectionViewController.xib */; };
+		656C737C1B521B6400797549 /* SZLDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */; };
+		656C737D1B521B6400797549 /* SZLDetailCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */; };
+		65D76D7F1B5B817B00C4D2E1 /* SZLPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */; };
+		65D76D821B5B849200C4D2E1 /* SZLPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D76D811B5B849200C4D2E1 /* SZLPhotoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +46,39 @@
 		655AC5811B50D5AF0014C907 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		655AC5831B50D5AF0014C907 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		655AC5841B50D5AF0014C907 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		655AC5861B50D5AF0014C907 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		655AC5871B50D5AF0014C907 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		655AC58A1B50D5AF0014C907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		655AC58C1B50D5AF0014C907 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		655AC58F1B50D5AF0014C907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		655AC5951B50D5AF0014C907 /* SZLPhotoBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZLPhotoBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		655AC59A1B50D5AF0014C907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		655AC59B1B50D5AF0014C907 /* SZLPhotoBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZLPhotoBrowserTests.m; sourceTree = "<group>"; };
+		655AC5A51B50D6480014C907 /* SZLContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLContainerViewController.h; sourceTree = "<group>"; };
+		655AC5A61B50D6480014C907 /* SZLContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLContainerViewController.m; sourceTree = "<group>"; };
+		655AC5A91B50D7C10014C907 /* SZLAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLAnimator.h; path = PhotoBroswer/SZLAnimator.h; sourceTree = "<group>"; };
+		655AC5AA1B50D7C10014C907 /* SZLAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLAnimator.m; path = PhotoBroswer/SZLAnimator.m; sourceTree = "<group>"; };
+		655AC5AC1B50D7F50014C907 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		655AC5AE1B50DDD90014C907 /* SZLTransitionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLTransitionContext.h; path = PhotoBroswer/SZLTransitionContext.h; sourceTree = "<group>"; };
+		655AC5AF1B50DDD90014C907 /* SZLTransitionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLTransitionContext.m; path = PhotoBroswer/SZLTransitionContext.m; sourceTree = "<group>"; };
+		655AC5B11B50EBDC0014C907 /* SZLUIView+SnapShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SZLUIView+SnapShot.h"; path = "PhotoBroswer/SZLUIView+SnapShot.h"; sourceTree = "<group>"; };
+		655AC5B21B50EBDC0014C907 /* SZLUIView+SnapShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SZLUIView+SnapShot.m"; path = "PhotoBroswer/SZLUIView+SnapShot.m"; sourceTree = "<group>"; };
+		656C73641B50F52700797549 /* SZLArraySource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLArraySource.h; sourceTree = "<group>"; };
+		656C73651B50F52700797549 /* SZLArraySource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLArraySource.m; sourceTree = "<group>"; };
+		656C73671B50FAA000797549 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		656C73691B511D3600797549 /* SZLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLDetailViewController.h; sourceTree = "<group>"; };
+		656C736A1B511D3600797549 /* SZLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLDetailViewController.m; sourceTree = "<group>"; };
+		656C736F1B5216C700797549 /* SZLContainerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLContainerCollectionViewController.h; sourceTree = "<group>"; };
+		656C73701B5216C700797549 /* SZLContainerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLContainerCollectionViewController.m; sourceTree = "<group>"; };
+		656C73711B5216C700797549 /* SZLContainerCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SZLContainerCollectionViewController.xib; sourceTree = "<group>"; };
+		656C73791B521B6400797549 /* SZLDetailCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLDetailCollectionViewController.h; sourceTree = "<group>"; };
+		656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLDetailCollectionViewController.m; sourceTree = "<group>"; };
+		656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SZLDetailCollectionViewController.xib; sourceTree = "<group>"; };
+		65D76D7D1B5B817B00C4D2E1 /* SZLPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLPhotoView.h; path = PhotoBroswer/SZLPhotoView.h; sourceTree = "<group>"; };
+		65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLPhotoView.m; path = PhotoBroswer/SZLPhotoView.m; sourceTree = "<group>"; };
+		65D76D801B5B849200C4D2E1 /* SZLPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLPhotoModel.h; path = PhotoBroswer/SZLPhotoModel.h; sourceTree = "<group>"; };
+		65D76D811B5B849200C4D2E1 /* SZLPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLPhotoModel.m; path = PhotoBroswer/SZLPhotoModel.m; sourceTree = "<group>"; };
+		856C7AFC0313C8441BF96E47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9E54F9E4DA8BCE1633639FA8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F8A1280BB17767EE1BB017A7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656C73681B50FAA000797549 /* ImageIO.framework in Frameworks */,
+				655AC5AD1B50D7F50014C907 /* UIKit.framework in Frameworks */,
+				07133A149F3460114C4BFA21 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +105,12 @@
 		655AC5731B50D5AF0014C907 = {
 			isa = PBXGroup;
 			children = (
+				655AC5AC1B50D7F50014C907 /* UIKit.framework */,
 				655AC57E1B50D5AF0014C907 /* SZLPhotoBrowser */,
 				655AC5981B50D5AF0014C907 /* SZLPhotoBrowserTests */,
 				655AC57D1B50D5AF0014C907 /* Products */,
+				7229F3B6EE076C28DD57560C /* Pods */,
+				C946EE79CD7E9E50307CC2D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +126,25 @@
 		655AC57E1B50D5AF0014C907 /* SZLPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				655AC5A81B50D7780014C907 /* PhotoBrowser */,
 				655AC5831B50D5AF0014C907 /* AppDelegate.h */,
 				655AC5841B50D5AF0014C907 /* AppDelegate.m */,
-				655AC5861B50D5AF0014C907 /* ViewController.h */,
-				655AC5871B50D5AF0014C907 /* ViewController.m */,
 				655AC5891B50D5AF0014C907 /* Main.storyboard */,
 				655AC58C1B50D5AF0014C907 /* Images.xcassets */,
 				655AC58E1B50D5AF0014C907 /* LaunchScreen.xib */,
 				655AC57F1B50D5AF0014C907 /* Supporting Files */,
+				655AC5A51B50D6480014C907 /* SZLContainerViewController.h */,
+				655AC5A61B50D6480014C907 /* SZLContainerViewController.m */,
+				656C73641B50F52700797549 /* SZLArraySource.h */,
+				656C73651B50F52700797549 /* SZLArraySource.m */,
+				656C73691B511D3600797549 /* SZLDetailViewController.h */,
+				656C736A1B511D3600797549 /* SZLDetailViewController.m */,
+				656C736F1B5216C700797549 /* SZLContainerCollectionViewController.h */,
+				656C73701B5216C700797549 /* SZLContainerCollectionViewController.m */,
+				656C73711B5216C700797549 /* SZLContainerCollectionViewController.xib */,
+				656C73791B521B6400797549 /* SZLDetailCollectionViewController.h */,
+				656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */,
+				656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */,
 			);
 			path = SZLPhotoBrowser;
 			sourceTree = "<group>";
@@ -119,6 +175,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		655AC5A81B50D7780014C907 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				655AC5A91B50D7C10014C907 /* SZLAnimator.h */,
+				655AC5AA1B50D7C10014C907 /* SZLAnimator.m */,
+				655AC5AE1B50DDD90014C907 /* SZLTransitionContext.h */,
+				655AC5AF1B50DDD90014C907 /* SZLTransitionContext.m */,
+				655AC5B11B50EBDC0014C907 /* SZLUIView+SnapShot.h */,
+				655AC5B21B50EBDC0014C907 /* SZLUIView+SnapShot.m */,
+				65D76D7D1B5B817B00C4D2E1 /* SZLPhotoView.h */,
+				65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */,
+				65D76D801B5B849200C4D2E1 /* SZLPhotoModel.h */,
+				65D76D811B5B849200C4D2E1 /* SZLPhotoModel.m */,
+			);
+			name = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		7229F3B6EE076C28DD57560C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				856C7AFC0313C8441BF96E47 /* Pods.debug.xcconfig */,
+				9E54F9E4DA8BCE1633639FA8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C946EE79CD7E9E50307CC2D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				656C73671B50FAA000797549 /* ImageIO.framework */,
+				F8A1280BB17767EE1BB017A7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 655AC59F1B50D5AF0014C907 /* Build configuration list for PBXNativeTarget "SZLPhotoBrowser" */;
 			buildPhases = (
+				358FEC33D9FA6F066B8BBF51 /* Check Pods Manifest.lock */,
 				655AC5781B50D5AF0014C907 /* Sources */,
 				655AC5791B50D5AF0014C907 /* Frameworks */,
 				655AC57A1B50D5AF0014C907 /* Resources */,
+				E24006FEF673C4CA402F550A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +292,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656C73731B5216C700797549 /* SZLContainerCollectionViewController.xib in Resources */,
 				655AC58B1B50D5AF0014C907 /* Main.storyboard in Resources */,
 				655AC5901B50D5AF0014C907 /* LaunchScreen.xib in Resources */,
 				655AC58D1B50D5AF0014C907 /* Images.xcassets in Resources */,
+				656C737D1B521B6400797549 /* SZLDetailCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +309,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		358FEC33D9FA6F066B8BBF51 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E24006FEF673C4CA402F550A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		655AC5781B50D5AF0014C907 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655AC5881B50D5AF0014C907 /* ViewController.m in Sources */,
+				655AC5AB1B50D7C10014C907 /* SZLAnimator.m in Sources */,
 				655AC5851B50D5AF0014C907 /* AppDelegate.m in Sources */,
+				65D76D821B5B849200C4D2E1 /* SZLPhotoModel.m in Sources */,
+				655AC5B31B50EBDC0014C907 /* SZLUIView+SnapShot.m in Sources */,
+				656C737C1B521B6400797549 /* SZLDetailCollectionViewController.m in Sources */,
+				656C73661B50F52700797549 /* SZLArraySource.m in Sources */,
+				656C73721B5216C700797549 /* SZLContainerCollectionViewController.m in Sources */,
+				655AC5A71B50D6480014C907 /* SZLContainerViewController.m in Sources */,
 				655AC5821B50D5AF0014C907 /* main.m in Sources */,
+				655AC5B01B50DDD90014C907 /* SZLTransitionContext.m in Sources */,
+				656C736B1B511D3600797549 /* SZLDetailViewController.m in Sources */,
+				65D76D7F1B5B817B00C4D2E1 /* SZLPhotoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +478,7 @@
 		};
 		655AC5A01B50D5AF0014C907 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856C7AFC0313C8441BF96E47 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SZLPhotoBrowser/Info.plist;
@@ -351,6 +489,7 @@
 		};
 		655AC5A11B50D5AF0014C907 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E54F9E4DA8BCE1633639FA8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SZLPhotoBrowser/Info.plist;
@@ -412,6 +551,7 @@
 				655AC5A11B50D5AF0014C907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		655AC5A21B50D5AF0014C907 /* Build configuration list for PBXNativeTarget "SZLPhotoBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +560,7 @@
 				655AC5A41B50D5AF0014C907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

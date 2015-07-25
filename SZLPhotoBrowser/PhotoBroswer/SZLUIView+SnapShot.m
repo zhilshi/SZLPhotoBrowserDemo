@@ -6,16 +6,21 @@
 //  Copyright (c) 2015年 zhil.shi. All rights reserved.
 //
 
-#import "SZLUIView+RectConvert.h"
+#import "SZLUIView+SnapShot.h"
 
-@implementation SZLUIView_RectConvert
+@implementation UIView (RectConvert)
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+- (UIImage *)viewImageFromSnapShot
+{
+    UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 0);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
-*/
+
+#pragma mark -
+#pragma mark -private
 
 @end

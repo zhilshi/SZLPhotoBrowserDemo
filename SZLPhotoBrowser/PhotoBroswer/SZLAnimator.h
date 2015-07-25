@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface SZLAnimator : NSObject
+@interface SZLAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

@@ -94,5 +94,13 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
-
+#pragma mark -
+#pragma mark - getter & setter
+- (UIImageView *)imageView
+{
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc]init];
+    }
+    return _imageView;
+}
 @end

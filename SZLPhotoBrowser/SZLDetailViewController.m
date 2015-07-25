@@ -7,31 +7,59 @@
 //
 
 #import "SZLDetailViewController.h"
-
+#import <PureLayout.h>
 @interface SZLDetailViewController ()
-
+@property (nonatomic,assign)BOOL isDidupdateContraints;
 @end
 
 @implementation SZLDetailViewController
+- (void)loadView
+{
+    self.view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.title = @"detail";
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.imageView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - 
+//- (void)updateViewConstraints
+//{
+//    if (self.isDidupdateContraints) {
+//        [self.imageView autoSetDimensionsToSize:self.imageView.intrinsicContentSize];
+//        [self.imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+//        [self.imageView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+//    }
+//    
+//    [super updateViewConstraints];
+//}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -
+#pragma mark -getter
+- (UIImageView *)imageView
+{
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc]init];
+        [_imageView setFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)/2.0-CGRectGetWidth(self.view.frame) * 9 / 16/2.0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame) * 9 / 16)];
+    }
+    return _imageView;
 }
-*/
 
 @end

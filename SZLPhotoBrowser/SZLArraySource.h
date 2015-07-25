@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+typedef void (^SelectBlock)(id item);
+@interface SZLArraySource : NSObject <UICollectionViewDataSource,
+                                      UICollectionViewDelegate,
+                                      UICollectionViewDelegateFlowLayout>
 
-@interface SZLArraySource : NSObject
+/**
+ *  初始化配置
+ *
+ *  @param cellIdentity 唯一标识
+ *  @param sourceArray  数据源
+ *  @param selectBlock  选择事件
+ */
+- (void)confingWithCellIdentity:(NSString *)cellIdentity
+                     dataSource:(NSArray  *)sourceArray
+                 didSelectBlock:(SelectBlock)selectBlock;
 
 @end
