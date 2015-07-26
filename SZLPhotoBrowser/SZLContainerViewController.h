@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SZLContainerViewController : UIViewController
+@property (nonatomic,strong)NSArray  *photoModels;
 
 @end

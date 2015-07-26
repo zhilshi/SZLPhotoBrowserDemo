@@ -26,6 +26,8 @@
 		656C73731B5216C700797549 /* SZLContainerCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C73711B5216C700797549 /* SZLContainerCollectionViewController.xib */; };
 		656C737C1B521B6400797549 /* SZLDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */; };
 		656C737D1B521B6400797549 /* SZLDetailCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */; };
+		65CB274F1B6498CF00514574 /* SZLBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB274E1B6498CF00514574 /* SZLBrowserView.m */; };
+		65CB27521B64A68900514574 /* SZLArray+photoModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB27511B64A68900514574 /* SZLArray+photoModels.m */; };
 		65D76D7F1B5B817B00C4D2E1 /* SZLPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */; };
 		65D76D821B5B849200C4D2E1 /* SZLPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D76D811B5B849200C4D2E1 /* SZLPhotoModel.m */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,10 @@
 		656C73791B521B6400797549 /* SZLDetailCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLDetailCollectionViewController.h; sourceTree = "<group>"; };
 		656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLDetailCollectionViewController.m; sourceTree = "<group>"; };
 		656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SZLDetailCollectionViewController.xib; sourceTree = "<group>"; };
+		65CB274D1B6498CF00514574 /* SZLBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLBrowserView.h; path = PhotoBroswer/SZLBrowserView.h; sourceTree = "<group>"; };
+		65CB274E1B6498CF00514574 /* SZLBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLBrowserView.m; path = PhotoBroswer/SZLBrowserView.m; sourceTree = "<group>"; };
+		65CB27501B64A68900514574 /* SZLArray+photoModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SZLArray+photoModels.h"; sourceTree = "<group>"; };
+		65CB27511B64A68900514574 /* SZLArray+photoModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SZLArray+photoModels.m"; sourceTree = "<group>"; };
 		65D76D7D1B5B817B00C4D2E1 /* SZLPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLPhotoView.h; path = PhotoBroswer/SZLPhotoView.h; sourceTree = "<group>"; };
 		65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLPhotoView.m; path = PhotoBroswer/SZLPhotoView.m; sourceTree = "<group>"; };
 		65D76D801B5B849200C4D2E1 /* SZLPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLPhotoModel.h; path = PhotoBroswer/SZLPhotoModel.h; sourceTree = "<group>"; };
@@ -145,6 +151,8 @@
 				656C73791B521B6400797549 /* SZLDetailCollectionViewController.h */,
 				656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */,
 				656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */,
+				65CB27501B64A68900514574 /* SZLArray+photoModels.h */,
+				65CB27511B64A68900514574 /* SZLArray+photoModels.m */,
 			);
 			path = SZLPhotoBrowser;
 			sourceTree = "<group>";
@@ -188,6 +196,8 @@
 				65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */,
 				65D76D801B5B849200C4D2E1 /* SZLPhotoModel.h */,
 				65D76D811B5B849200C4D2E1 /* SZLPhotoModel.m */,
+				65CB274D1B6498CF00514574 /* SZLBrowserView.h */,
+				65CB274E1B6498CF00514574 /* SZLBrowserView.m */,
 			);
 			name = PhotoBrowser;
 			sourceTree = "<group>";
@@ -350,8 +360,10 @@
 				655AC5AB1B50D7C10014C907 /* SZLAnimator.m in Sources */,
 				655AC5851B50D5AF0014C907 /* AppDelegate.m in Sources */,
 				65D76D821B5B849200C4D2E1 /* SZLPhotoModel.m in Sources */,
+				65CB274F1B6498CF00514574 /* SZLBrowserView.m in Sources */,
 				655AC5B31B50EBDC0014C907 /* SZLUIView+SnapShot.m in Sources */,
 				656C737C1B521B6400797549 /* SZLDetailCollectionViewController.m in Sources */,
+				65CB27521B64A68900514574 /* SZLArray+photoModels.m in Sources */,
 				656C73661B50F52700797549 /* SZLArraySource.m in Sources */,
 				656C73721B5216C700797549 /* SZLContainerCollectionViewController.m in Sources */,
 				655AC5A71B50D6480014C907 /* SZLContainerViewController.m in Sources */,

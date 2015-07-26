@@ -10,27 +10,37 @@
 @interface SZLPhotoModel ()
 @property (nonatomic,strong,readwrite)NSString *commentStr;/**< 评论 */
 
-@property (nonatomic,strong,readwrite)NSString *headerImageUrl; /**< 头像路径*/
+@property (nonatomic,strong,readwrite)NSURL *headerImageUrl; /**< 头像路径*/
 
-@property (nonatomic,strong,readwrite)NSString *defaultImageNameStr;/**< 默认图片*/
+@property (nonatomic,strong,readwrite)NSString *defaultHeaderImageNameStr;/**<默认的本地头像名称*/
 
-@property (nonatomic,strong,readwrite)NSString *originalImageUrl;/**< 原始图片url*/
+@property (nonatomic,strong,readwrite)NSURL *originalImageUrl;/**< 原始图片url*/
+
+@property (nonatomic,strong,readwrite)NSString *defaultOriginalImageNameStr;/**< 默认图片*/
+
 
 @end
 
 @implementation SZLPhotoModel
 
 - (instancetype)initWithCommentStr:(NSString *)commentStr
-                    headerImageUrl:(NSString *)headerImageUrl
-                  defaultImageName:(NSString *)defaultImageName
-                   orginalImageUrl:(NSString *)originalImageUrl
+                    headerImageUrl:(NSURL *)headerImageUrl
+            defaultHeaderImageName:(NSString *)defaultHeaderImageName
+                   orginalImageUrl:(NSURL *)originalImageUrl
+          defaultOriginalImageName:(NSString *)defaultOriginalImageName
 {
     if (self = [super init]) {
         _commentStr = commentStr;
         _headerImageUrl = headerImageUrl;
-        _defaultImageNameStr = defaultImageName;
+        _defaultHeaderImageNameStr = defaultHeaderImageName;
         _originalImageUrl = originalImageUrl;
+        _defaultOriginalImageNameStr = defaultOriginalImageName;
     }
     return self;
+}
+
+- (instancetype)initWithDefaultConfign
+{
+    return [[SZLPhotoModel alloc]initWithCommentStr:@"" headerImageUrl:nil defaultHeaderImageName:@"" orginalImageUrl:nil defaultOriginalImageName:@""];
 }
 @end

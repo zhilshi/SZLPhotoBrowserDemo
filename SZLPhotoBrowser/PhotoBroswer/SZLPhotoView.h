@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#define SZL_DESIGNATED_INITIALIZER __attribute__((objc_designated_initializer)) /**<明确构造函数*/
+
 @class SZLPhotoModel;
 
 @interface SZLPhotoView : UIView
@@ -14,10 +17,17 @@
 @property (nonatomic,strong,readonly) SZLPhotoModel *photoModel;
 
 /**
- *  设置更新model
+ *  初始化
  *
  *  @param photoModel 对象
  */
-- (void)updatePhotoModel:(SZLPhotoModel*)photoModel;
+- (instancetype)initWithPhotoModel:(SZLPhotoModel*)photoModel SZL_DESIGNATED_INITIALIZER;
+
+/**
+ *  更新数据模型
+ *
+ *  @param photoModel 数据模型
+ */
+- (void)updatePhotoModel:(SZLPhotoModel *)photoModel;
 
 @end

@@ -12,6 +12,8 @@
 #import "SZLDetailCollectionViewController.h"
 #import "SZLAnimator.h"
 #import "SZLDetailViewController.h"
+#import "SZLArray+photoModels.h"
+
 @interface SZLContainerCollectionViewController ()<UICollectionViewDelegateFlowLayout,UINavigationControllerDelegate,
 UIViewControllerInteractiveTransitioning,UIViewControllerAnimatedTransitioning>
 
@@ -25,7 +27,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.photoModels = [self.sourceArray photoModelsArray];
+
     [self.view setBackgroundColor:[UIColor whiteColor]];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;

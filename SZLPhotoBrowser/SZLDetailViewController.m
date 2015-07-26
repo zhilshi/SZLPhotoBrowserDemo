@@ -7,9 +7,17 @@
 //
 
 #import "SZLDetailViewController.h"
-#import <PureLayout.h>
+#import <Masonry.h>
+#import "SZLPhotoModel.h"
 @interface SZLDetailViewController ()
+
 @property (nonatomic,assign)BOOL isDidupdateContraints;
+
+@property (nonatomic,strong,readwrite)SZLBrowserView *browserView;
+
+@property (nonatomic,strong) UIScrollView *scrollView;
+
+
 @end
 
 @implementation SZLDetailViewController
@@ -18,12 +26,16 @@
     self.view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.title = @"detail";
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.imageView];
+    [self.view addSubview:self.browserView];
+    self.edgesForExtendedLayout = NO;
+    [self.navigationController.navigationBar setTranslucent:NO];
+        
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -40,26 +52,45 @@
 }
 
 #pragma mark - 
-//- (void)updateViewConstraints
-//{
-//    if (self.isDidupdateContraints) {
-//        [self.imageView autoSetDimensionsToSize:self.imageView.intrinsicContentSize];
-//        [self.imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-//        [self.imageView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-//    }
-//    
-//    [super updateViewConstraints];
-//}
+- (void)updateViewConstraints
+{
+    [self.browserView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    
+    [super updateViewConstraints];
+}
 
 #pragma mark -
 #pragma mark -getter
-- (UIImageView *)imageView
+- (SZLBrowserView *)browserView
 {
-    if (!_imageView) {
-        _imageView = [[UIImageView alloc]init];
-        [_imageView setFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)/2.0-CGRectGetWidth(self.view.frame) * 9 / 16/2.0, CGRectGetWidth(self.view.frame), CGRectGetWidth(self.view.frame) * 9 / 16)];
+    if (!_browserView)
+    {
+        _browserView = [[SZLBrowserView alloc]init];
+        [_browserView setBackgroundColor:[UIColor redColor]];
     }
-    return _imageView;
+    return _browserView;
 }
 
+- (void)setSourceArray:(NSArray *)sourceArray
+{
+    if (!sourceArray)
+    {
+        return;
+    }
+    
+    [self.browserView updatePhotoModels:sourceArray];
+    
+}
+
+- (UIScrollView *)scrollView
+{
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc]init];
+        [_scrollView setBackgroundColor:[UIColor redColor]];
+    }
+    return _scrollView;
+}
 @end

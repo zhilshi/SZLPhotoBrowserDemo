@@ -10,4 +10,5 @@
 
 @interface SZLContainerCollectionViewController : UICollectionViewController
 
+@property (nonatomic,strong)NSArray *photoModels;
 @end

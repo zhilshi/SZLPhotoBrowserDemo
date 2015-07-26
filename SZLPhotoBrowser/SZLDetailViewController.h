@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SZLBrowserView.h"
 @interface SZLDetailViewController : UIViewController
 
-@property (nonatomic,strong)UIImageView *imageView;
+@property (nonatomic,strong)NSArray *sourceArray;
 
+@property (nonatomic,strong,readonly)SZLBrowserView *browserView;
 @end

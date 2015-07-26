@@ -93,6 +93,8 @@
                              @"http://img.7160.com/uploads/allimg/131206/9-131206102I9.jpg",
                              @"http://img.7160.com/uploads/allimg/131206/9-131206102J2.jpg",
                              @"http://img.7160.com/uploads/allimg/131206/9-131206102J6.jpg"];
+    
+    
     [self.arraySource confingWithCellIdentity:NSStringFromClass([self class]) dataSource:sourceArray didSelectBlock:^(id item) {
         NSLog(@"select index is %@",item);
         
