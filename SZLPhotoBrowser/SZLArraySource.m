@@ -42,7 +42,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellIdentityStr forIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor redColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
 
     if ([cell.contentView viewWithTag:0x1010]) {
     

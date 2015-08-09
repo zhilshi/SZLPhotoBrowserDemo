@@ -11,6 +11,7 @@
 #import <Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 @interface SZLPhotoView ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
+@property (nonatomic,copy,readwrite  ) NSString *reuseIdentifier;
 @property (nonatomic,strong,readwrite) SZLPhotoModel *photoModel;
 
 @property (nonatomic,strong) UIImageView                 *headerImageView;
@@ -35,7 +36,7 @@
 #pragma mark - setUp
 - (void)setUp
 {
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor blackColor]];
     [self addGestureRecognizer:self.doubleTap];
     [self addGestureRecognizer:self.singleTap];
     [self addGestureRecognizer:self.rotaTap];
@@ -58,42 +59,41 @@
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
+    
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
         make.size.equalTo(self.scrollView);
     }];
-//
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(300, 300));
         make.centerY.equalTo(self.containerView);
-        make.centerX.equalTo(self.containerView);
+        make.leading.equalTo(self.containerView);
+        make.trailing.equalTo(self.containerView);
+        make.height.mas_equalTo(300);
     }];
     
     
     [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.mas_bottom).offset(-20);
         make.centerX.equalTo(self);
-        CGSize fitSize = self.tipLabel.intrinsicContentSize;
-        make.size.mas_equalTo(fitSize);
+        make.size.mas_equalTo(CGSizeMake(300, 20));
     }];
-    
     
     [super updateConstraints];
 }
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    self.tipLabel.preferredMaxLayoutWidth = self.tipLabel.frame.size.width;
-    [super layoutSubviews];
-}
+//- (void)layoutSubviews
+//{
+//    [super layoutSubviews];
+////    self.tipLabel.preferredMaxLayoutWidth = self.tipLabel.frame.size.width;
+//    [super layoutSubviews];
+//}
 #pragma mark -
 #pragma mark - public
-- (instancetype)initWithPhotoModel:(SZLPhotoModel*)photoModel
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super init])
     {
-        _photoModel = photoModel;
+        _reuseIdentifier = reuseIdentifier;
         [self setUp];
     }
     return self;
@@ -108,9 +108,10 @@
 
 - (void)updateValues:(SZLPhotoModel *)photoModel
 {
-    if (photoModel.commentStr)
+//    if (photoModel.commentStr)
     {
-        [self.tipLabel setText:photoModel.commentStr];
+        NSString *str = [NSString stringWithFormat:@"%ld",self.index];
+        [self.tipLabel setText:str];
     }
     
     if (photoModel.headerImageUrl)
@@ -256,9 +257,10 @@
     {
         _scrollView = [[UIScrollView alloc]init];
         _scrollView.clipsToBounds = NO;
-        _scrollView.delegate = self;
-        _scrollView.minimumZoomScale = 0.5;
-        _scrollView.maximumZoomScale = 1.5;
+//        _scrollView.delegate = self;
+//        _scrollView.minimumZoomScale = 0.5;
+//        _scrollView.maximumZoomScale = 1.5;
+        _scrollView.userInteractionEnabled = NO;
     }
     return _scrollView;
 }
@@ -295,6 +297,8 @@
     if (!_tipLabel)
     {
         _tipLabel = [[UILabel alloc]init];
+        [_tipLabel setTextAlignment:NSTextAlignmentCenter];
+        [_tipLabel setTextColor:[UIColor whiteColor]];
         [_tipLabel setText:@"HELLO! Honey!"];
         
     }

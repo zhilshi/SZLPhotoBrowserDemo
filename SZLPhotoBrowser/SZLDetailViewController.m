@@ -35,7 +35,7 @@
     [self.view addSubview:self.browserView];
     self.edgesForExtendedLayout = NO;
     [self.navigationController.navigationBar setTranslucent:NO];
-        
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -58,10 +58,23 @@
         make.edges.equalTo(self.view);
     }];
     
-    
     [super updateViewConstraints];
 }
 
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait|UIInterfaceOrientationMaskLandscape;
+}
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+//    [self.view setNeedsUpdateConstraints];
+//    [self.browserView setNeedsUpdateConstraints];
+    [self.browserView selectIndexPhoto:self.browserView.curIndex withOrientation:toInterfaceOrientation];
+}
 #pragma mark -
 #pragma mark -getter
 - (SZLBrowserView *)browserView
@@ -69,7 +82,7 @@
     if (!_browserView)
     {
         _browserView = [[SZLBrowserView alloc]init];
-        [_browserView setBackgroundColor:[UIColor redColor]];
+        [_browserView setBackgroundColor:[UIColor blackColor]];
     }
     return _browserView;
 }
@@ -89,7 +102,7 @@
 {
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc]init];
-        [_scrollView setBackgroundColor:[UIColor redColor]];
+        [_scrollView setBackgroundColor:[UIColor whiteColor]];
     }
     return _scrollView;
 }

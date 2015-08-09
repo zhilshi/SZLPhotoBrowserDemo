@@ -26,6 +26,7 @@
 		656C73731B5216C700797549 /* SZLContainerCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C73711B5216C700797549 /* SZLContainerCollectionViewController.xib */; };
 		656C737C1B521B6400797549 /* SZLDetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */; };
 		656C737D1B521B6400797549 /* SZLDetailCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */; };
+		65925A7C1B76FD23001E4C84 /* SZLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65925A7B1B76FD23001E4C84 /* SZLViewModel.m */; };
 		65CB274F1B6498CF00514574 /* SZLBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB274E1B6498CF00514574 /* SZLBrowserView.m */; };
 		65CB27521B64A68900514574 /* SZLArray+photoModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB27511B64A68900514574 /* SZLArray+photoModels.m */; };
 		65D76D7F1B5B817B00C4D2E1 /* SZLPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D76D7E1B5B817B00C4D2E1 /* SZLPhotoView.m */; };
@@ -74,6 +75,8 @@
 		656C73791B521B6400797549 /* SZLDetailCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZLDetailCollectionViewController.h; sourceTree = "<group>"; };
 		656C737A1B521B6400797549 /* SZLDetailCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZLDetailCollectionViewController.m; sourceTree = "<group>"; };
 		656C737B1B521B6400797549 /* SZLDetailCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SZLDetailCollectionViewController.xib; sourceTree = "<group>"; };
+		65925A7A1B76FD23001E4C84 /* SZLViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLViewModel.h; path = PhotoBroswer/SZLViewModel.h; sourceTree = "<group>"; };
+		65925A7B1B76FD23001E4C84 /* SZLViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLViewModel.m; path = PhotoBroswer/SZLViewModel.m; sourceTree = "<group>"; };
 		65CB274D1B6498CF00514574 /* SZLBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZLBrowserView.h; path = PhotoBroswer/SZLBrowserView.h; sourceTree = "<group>"; };
 		65CB274E1B6498CF00514574 /* SZLBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZLBrowserView.m; path = PhotoBroswer/SZLBrowserView.m; sourceTree = "<group>"; };
 		65CB27501B64A68900514574 /* SZLArray+photoModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SZLArray+photoModels.h"; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				65D76D811B5B849200C4D2E1 /* SZLPhotoModel.m */,
 				65CB274D1B6498CF00514574 /* SZLBrowserView.h */,
 				65CB274E1B6498CF00514574 /* SZLBrowserView.m */,
+				65925A7A1B76FD23001E4C84 /* SZLViewModel.h */,
+				65925A7B1B76FD23001E4C84 /* SZLViewModel.m */,
 			);
 			name = PhotoBrowser;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				656C73721B5216C700797549 /* SZLContainerCollectionViewController.m in Sources */,
 				655AC5A71B50D6480014C907 /* SZLContainerViewController.m in Sources */,
 				655AC5821B50D5AF0014C907 /* main.m in Sources */,
+				65925A7C1B76FD23001E4C84 /* SZLViewModel.m in Sources */,
 				655AC5B01B50DDD90014C907 /* SZLTransitionContext.m in Sources */,
 				656C736B1B511D3600797549 /* SZLDetailViewController.m in Sources */,
 				65D76D7F1B5B817B00C4D2E1 /* SZLPhotoView.m in Sources */,

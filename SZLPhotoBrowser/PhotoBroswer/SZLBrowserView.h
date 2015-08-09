@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SZLBrowserView : UIView
+
+@property (nonatomic,assign)NSInteger curIndex;
 /**
  *  设置数据源
  *
@@ -21,5 +23,5 @@
  *
  *  @param index 角标
  */
-- (void)selectIndexPhoto:(NSInteger)index;
+- (void)selectIndexPhoto:(NSInteger)index withOrientation:(UIInterfaceOrientation)userfaceOrientation;
 @end

@@ -43,4 +43,5 @@
  *  @return 默认配置
  */
 - (instancetype)initWithDefaultConfign;
+
 @end

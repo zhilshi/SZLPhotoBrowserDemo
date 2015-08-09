@@ -87,7 +87,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     // Configure the cell
-    [cell.contentView setBackgroundColor:[UIColor redColor]];
+    [cell.contentView setBackgroundColor:[UIColor clearColor]];
     return cell;
 }
 

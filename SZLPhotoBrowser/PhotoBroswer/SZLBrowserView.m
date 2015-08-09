@@ -9,16 +9,27 @@
 #import "SZLBrowserView.h"
 #import "SZLPhotoModel.h"
 #import "SZLPhotoView.h"
+#import "SZLViewModel.h"
 #import <Masonry.h>
 @interface SZLBrowserView ()<UIScrollViewDelegate>
+
+@property (nonatomic,assign)UIInterfaceOrientation curInterfaceOrientation;
 
 @property (nonatomic,strong) UIScrollView   *scrollView;
 
 @property (nonatomic,strong) UIView *containerView;
 
-@property (nonatomic,copy  ) NSArray        *sourceArray;
+@property (nonatomic,strong) SZLViewModel *photoViewModel;
 
-@property (nonatomic,strong) NSMutableArray *photoViewArray;
+@property (nonatomic,strong) SZLPhotoView *curPhotoView;
+
+@property (nonatomic,strong) SZLPhotoView *nextPhotoView;
+
+@property (nonatomic,assign) NSInteger nextIndex;
+
+@property (nonatomic,assign)BOOL isStartScroll;
+
+@property (nonatomic,assign)BOOL isDoneFinish;
 @end
 
 @implementation SZLBrowserView
@@ -32,6 +43,9 @@
 
 - (void)setUp
 {
+    self.curIndex  = 0;
+    self.nextIndex = 0;
+    self.curInterfaceOrientation = UIInterfaceOrientationMaskPortrait;
     [self addSubview:self.scrollView];
     [self.scrollView addSubview:self.containerView];
 }
@@ -44,72 +58,167 @@
         make.edges.equalTo(self);
     }];
     
+    NSInteger mutipliedInt = [self.photoViewModel numberOfPhotoViews];
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
-//        make.width.equalTo(@([UIScreen mainScreen].bounds.size.width));
-        make.height.equalTo(@([UIScreen mainScreen].bounds.size.height-64));
+        make.width.equalTo(self.scrollView).multipliedBy(mutipliedInt);
+        make.height.equalTo(self.scrollView);
     }];
-    
-    __block UIView *lastView = nil;
-    [self.photoViewArray enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
 
-        [obj mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.equalTo(self.scrollView);
-            make.top.equalTo(self.containerView);
-            if (lastView)
-            {
-                make.leading.equalTo(lastView.mas_trailing);
-            }
-            else
-            {
-                make.leading.equalTo(self.containerView);
-            }
-        }];
-        lastView = obj;
-    }];
-    [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(self.scrollView).multipliedBy(self.photoViewArray.count);
+    float width = [self photoViewWidthForUserInfaceOrientation:self.curInterfaceOrientation];
+    
+    [self.curPhotoView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(self.scrollView);
+        make.top.equalTo(self.containerView);
+        make.leading.equalTo(self.containerView).offset(self.curIndex * width);
     }];
     [super updateConstraints];
+}
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = [self photoViewWidthForUserInfaceOrientation:self.curInterfaceOrientation] * self.curIndex;
+    [self.scrollView setContentOffset:offset];
 }
 #pragma mark -
 #pragma mark - public
 - (void)updatePhotoModels:(NSArray *)sourceArray
 {
-    if (!sourceArray) {
-        return;
-    }
-    
-    _sourceArray = [sourceArray copy];
-    [self updateValuesWithPhotoModels:_sourceArray];
-}
-
-- (void)updateValuesWithPhotoModels:(NSArray *)sourceArray
-{
-    [self.containerView.subviews enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
-        [obj removeFromSuperview];
-    }];
-    
-    __weak typeof(self)weakSelf = self;
-    [sourceArray enumerateObjectsUsingBlock:^(SZLPhotoModel *obj, NSUInteger idx, BOOL *stop) {
-        SZLPhotoView *photoView = [[SZLPhotoView alloc]initWithPhotoModel:obj];
-        [weakSelf.photoViewArray addObject:photoView];
-    }];
-    
-    [self.photoViewArray enumerateObjectsUsingBlock:^(SZLPhotoView *obj, NSUInteger idx, BOOL *stop) {
-        [weakSelf.containerView addSubview:obj];
-    }];
-    
-    [self setNeedsUpdateConstraints];
-    
-}
-- (void)selectIndexPhoto:(NSInteger)index
-{
-    if (index >= [self.sourceArray count])
+    if (!sourceArray)
     {
         return;
     }
-    [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.scrollView.frame) * index, 0)];
+    self.photoViewModel.sourceArray = sourceArray;
+    [self.containerView.subviews enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
+        [obj removeFromSuperview];
+    }];
+    self.curPhotoView = [self.photoViewModel photoViewForshowAtIndex:self.curIndex];
+    [self.containerView addSubview:self.curPhotoView];
+}
+
+- (void)selectIndexPhoto:(NSInteger)index withOrientation:(UIInterfaceOrientation)userfaceOrientation
+{
+    self.curInterfaceOrientation = userfaceOrientation;
+    [self setNeedsUpdateConstraints];
+}
+
+#pragma mark - uiscrollviewdelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 计算下一个index
+    if (!self.isStartScroll)
+    {
+        return;
+    }
+    NSLog(@"scrollViewDidScroll");
+
+    
+    if (self.isDoneFinish)
+    {
+        return;
+    }
+    if (self.curIndex != self.nextIndex )
+    {
+        return;
+    }
+    
+    NSInteger next    = [self.photoViewModel nextIndexWithScrollView:scrollView curIndex:self.curIndex];
+    NSLog(@"next is %ld",(long)next);
+    NSLog(@"nextIndex is %ld",(long)self.nextIndex);
+    if (next == self.nextIndex) {
+        return;
+    }
+    self.isDoneFinish = YES;
+    [self selectToIndex:next];
+    self.isDoneFinish = NO;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    NSLog(@"scrollViewWillBeginDragging");
+    self.isStartScroll = YES;
+    self.nextIndex = self.curIndex;
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    NSLog(@"scrollViewWillEndDragging");
+    self.isStartScroll = NO;
+    NSLog(@"targetOffset is %f",targetContentOffset->x);
+    NSInteger index =  targetContentOffset->x / CGRectGetWidth(self.frame);
+    if (self.curIndex != index)
+    {
+        NSLog(@"target");
+        [self selectToIndex:index];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"scrollViewDidEndDecelerating");
+    CGPoint contentOffset = scrollView.contentOffset;
+    NSInteger index =  contentOffset.x / CGRectGetWidth(self.frame);
+    if (self.curIndex != index)
+    {
+        NSLog(@"target");
+        [self selectToIndex:index];
+    }
+}
+
+
+- (void)selectToIndex:(NSInteger)toIndex
+{
+    if (toIndex >= [self.photoViewModel.sourceArray count])
+    {
+        return;
+    }
+    
+    self.nextIndex = toIndex;
+    self.nextPhotoView = [self.photoViewModel photoViewForshowAtIndex:self.nextIndex];
+    if (!self.nextPhotoView.superview)
+    {
+        [self.containerView addSubview:self.nextPhotoView];
+    }
+    
+    float width = [self photoViewWidthForUserInfaceOrientation:self.curInterfaceOrientation];
+    float leadingOffset = width * self.nextIndex;
+    [self.nextPhotoView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.size.equalTo(self.scrollView);
+        make.top.equalTo(self.containerView);
+        make.leading.equalTo(self.containerView).offset(leadingOffset);
+    }];
+    
+    
+    NSLog(@"leading Offset is %ld",(long)leadingOffset);
+    NSLog(@"curPhotoSzl %@",self.nextPhotoView);
+
+    [self.photoViewModel dealWithResuablePhotoView:self.curPhotoView visiblePhotoView:self.nextPhotoView];
+    self.curPhotoView  = self.nextPhotoView;
+    self.nextPhotoView = nil;
+    NSInteger curIndex = self.curIndex;
+    self.curIndex  = self.nextIndex;
+    self.nextIndex = curIndex;
+    [self setNeedsUpdateConstraints];
+
+}
+
+- (float)photoViewWidthForUserInfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    float width = 0;
+    float screenWidth = [UIScreen mainScreen].bounds.size.width;
+    float screenHeight = [UIScreen mainScreen].bounds.size.height;
+    if (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown || interfaceOrientation == UIInterfaceOrientationPortrait)
+    {
+        width = (screenWidth > screenHeight ? screenHeight:screenWidth);
+        NSLog(@"Portrait width is %f",width);
+    }
+    else
+    {
+        width = (screenWidth > screenHeight ? screenWidth:screenHeight);
+        NSLog(@"HH width is %f",width);
+    }
+    return width;
 }
 #pragma mark -
 #pragma mark - getter & setter
@@ -119,6 +228,7 @@
     {
         _scrollView = [[UIScrollView alloc]init];
         _scrollView.pagingEnabled = YES;
+        _scrollView.bounces = NO;
         _scrollView.delegate = self;
     }
     return _scrollView;
@@ -133,12 +243,14 @@
     return _containerView;
 }
 
-- (NSMutableArray *)photoViewArray
+
+- (SZLViewModel *)photoViewModel
 {
-    if (!_photoViewArray)
+    if (!_photoViewModel)
     {
-        _photoViewArray = [NSMutableArray array];
+        _photoViewModel = [[SZLViewModel alloc]init];
     }
-    return _photoViewArray;
+    return _photoViewModel;
 }
+
 @end

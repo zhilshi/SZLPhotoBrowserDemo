@@ -8,20 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-#define SZL_DESIGNATED_INITIALIZER __attribute__((objc_designated_initializer)) /**<明确构造函数*/
-
 @class SZLPhotoModel;
 
 @interface SZLPhotoView : UIView
 
-@property (nonatomic,strong,readonly) SZLPhotoModel *photoModel;
+@property (nonatomic,copy,readonly  ) NSString      *reuseIdentifier;/**<复用标识*/
+
+@property (nonatomic,assign) NSInteger     index;/**<下标标识*/
+
+@property (nonatomic,strong,readonly) SZLPhotoModel *photoModel;/**<数据对象*/
 
 /**
  *  初始化
  *
  *  @param photoModel 对象
  */
-- (instancetype)initWithPhotoModel:(SZLPhotoModel*)photoModel SZL_DESIGNATED_INITIALIZER;
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier NS_DESIGNATED_INITIALIZER;
 
 /**
  *  更新数据模型
